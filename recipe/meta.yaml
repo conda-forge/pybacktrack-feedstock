@@ -19,6 +19,7 @@ requirements:
     - python {{ python_min }}
     - pytest-runner
     - pip
+    - setuptools
   run:
     - python >={{ python_min }}
     - gmt >=5.0.0
