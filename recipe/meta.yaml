@@ -1,5 +1,5 @@
 {% set name = "pybacktrack" %}
-{% set version = "1.4.0" %}
+{% set version = "1.5.0" %}
 
 package:
   name: {{ name }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: "https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: 6277fc5263e2a38c1c472435fea612fa9fb7923a14ba33b4dc30ba2e984411e7
+  sha256: 8b540d2839062ba4964b6635177e376b649ba360720040f1b519afd7f0cab1d3
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
