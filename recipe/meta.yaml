@@ -21,7 +21,8 @@ requirements:
     - setuptools
   run:
     - python >={{ python_min }}
-    - gmt >=5.0.0
+    - gmt 6.5.*   # Use GMT built before proj 9.8 migration
+    - proj 9.7.*  # PyGPlates not yet working for proj 9.8
     - numpy
     - pygplates
     - scipy
