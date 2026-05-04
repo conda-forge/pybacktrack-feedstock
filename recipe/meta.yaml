@@ -18,6 +18,7 @@ requirements:
   host:
     - python {{ python_min }}
     - pip
+    - setuptools
   run:
     - python >={{ python_min }}
     - gmt >=5.0.0
@@ -31,6 +32,7 @@ test:
   imports:
     - pybacktrack
   requires:
+    - python {{ python_min }}
     - pytest
   commands:
     - pytest
