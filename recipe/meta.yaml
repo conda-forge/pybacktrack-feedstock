@@ -11,10 +11,10 @@ source:
 
 build:
   noarch: python
-  script:
+  script_env:
     # There's not '.git' directory in source tarball, so explicitly provide version for setuptools_scm.
-    - export SETUPTOOLS_SCM_PRETEND_VERSION_FOR_PYBACKTRACK={{ version }}  # [unix]
-    - set "SETUPTOOLS_SCM_PRETEND_VERSION_FOR_PYBACKTRACK={{ version }}"  # [win]
+    - SETUPTOOLS_SCM_PRETEND_VERSION_FOR_PYBACKTRACK={{ version }}
+  script:
     - {{ PYTHON }} -m pip install . -vv
   number: 0
 
