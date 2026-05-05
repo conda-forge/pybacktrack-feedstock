@@ -15,8 +15,8 @@ echo "150 -30" | gmt grdtrack -G"${PKG_PATH}/bundle_data/sediment_thickness/Glob
 #echo "Sampling: z"
 #echo "150 -30" | gmt grdtrack -G"${PKG_PATH}/bundle_data/sediment_thickness/GlobSed.nc?z"
 
-echo "Sampling: gdal"
-echo "150 -30" | gmt grdtrack -G"${PKG_PATH}/bundle_data/sediment_thickness/GlobSed.nc=gd"
+#echo "Sampling: gdal"
+#echo "150 -30" | gmt grdtrack -G"${PKG_PATH}/bundle_data/sediment_thickness/GlobSed.nc=gd"
 
 echo "Sampling: netcdf"
 echo "150 -30" | gmt grdtrack -G"${PKG_PATH}/bundle_data/sediment_thickness/GlobSed.nc=nf"
