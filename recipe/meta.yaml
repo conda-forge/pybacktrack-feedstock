@@ -34,6 +34,8 @@ test:
   requires:
     - python {{ python_min }}
     - pytest
+  files:
+    - run_test_grid.sh
   commands:
     - bash run_test_grid.sh  # [unix]
     - pytest
