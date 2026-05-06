@@ -15,14 +15,14 @@ build:
     # There's no '.git' directory in source tarball, so explicitly provide version for setuptools_scm.
     - SETUPTOOLS_SCM_PRETEND_VERSION_FOR_PYBACKTRACK={{ version }}
   script:
-    - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --ignore-installed
+    - {{ PYTHON }} -m pip install . -vv
   number: 0
 
 requirements:
   host:
     - python {{ python_min }}
     - pip
-    # Same setuptools* versions as in pyproject.toml (in source tarball).
+    # Using same setuptools[_scm] versions as pyproject.toml (in source tarball).
     - setuptools >=61.0
     - setuptools_scm >=8.0  # Need this to process SETUPTOOLS_SCM_PRETEND_VERSION_FOR_PYBACKTRACK env var.
   run:
@@ -31,7 +31,7 @@ requirements:
     - numpy
     - pygplates
     - scipy
-    - packaging >=20.0
+    - packaging >=20.0  # Dependency in pyproject.toml (to parse versions in pybacktrack).
 
 test:
   source_files:
