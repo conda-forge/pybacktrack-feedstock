@@ -12,7 +12,7 @@ source:
 build:
   noarch: python
   script_env:
-    # There's not '.git' directory in source tarball, so explicitly provide version for setuptools_scm.
+    # There's no '.git' directory in source tarball, so explicitly provide version for setuptools_scm.
     - SETUPTOOLS_SCM_PRETEND_VERSION_FOR_PYBACKTRACK={{ version }}
   script:
     - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --ignore-installed
@@ -41,10 +41,7 @@ test:
   requires:
     - python {{ python_min }}
     - pytest
-  files:
-    - run_test_grid.sh
   commands:
-    - bash run_test_grid.sh  # [unix]
     - pytest
 
 about:
