@@ -22,14 +22,16 @@ requirements:
   host:
     - python {{ python_min }}
     - pip
-    - setuptools >=61
-    - setuptools_scm >=8  # Need this to process SETUPTOOLS_SCM_PRETEND_VERSION_FOR_PYBACKTRACK env var.
+    # Same setuptools* versions as in pyproject.toml (in source tarball).
+    - setuptools >=61.0
+    - setuptools_scm >=8.0  # Need this to process SETUPTOOLS_SCM_PRETEND_VERSION_FOR_PYBACKTRACK env var.
   run:
     - python >={{ python_min }}
-    - gmt >=5.0.0
+    - gmt >=5.0
     - numpy
     - pygplates
     - scipy
+    - packaging >=20.0
 
 test:
   source_files:
